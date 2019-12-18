@@ -4,7 +4,7 @@
 ```
 start esx_taxes
 ```
-## Dependent
+## Requirement
 * pNotify https://github.com/Nick78111/pNotify
 * esx_billing https://github.com/Nick78111/pNotify
 
