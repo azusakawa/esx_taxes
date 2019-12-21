@@ -9,13 +9,15 @@ Citizen.CreateThread(function()
 end)
 
 Citizen.CreateThread(function()
-    while true do 
+	local clock = GetClockHours()
+    local day = GetClockDayOfWeek()
+	local min = GetClockMinutes()
+    while day == 1 do 
 		Citizen.Wait(0)
-        local clock = GetClockHours()
-        local day = GetClockDayOfWeek()
-        if day == 1 then
         	if clock == 8 then
-				TriggerServerEvent('esx_taxes:player')
+				if min == 30 then
+					TriggerServerEvent('esx_taxes:player')
+				end
 			end
 		end
 	end
