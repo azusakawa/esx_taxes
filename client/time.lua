@@ -21,6 +21,12 @@ Citizen.CreateThread(function()
 		DisplayTime()
 		hour = 24 - hour
 		minute = 60 - minute
+					if hour <= 9 then
+			hour = "0" .. hour
+		end
+		if minute <= 9 then
+			minute = "0" .. minute
+		end
         DrawTxt("繳稅倒數時間: ".. DayOfWeek .. " : " .. hour .." : ".. minute, 0.465, 0.045)
     end
 end)
