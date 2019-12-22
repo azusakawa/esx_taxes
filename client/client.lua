@@ -13,12 +13,12 @@ Citizen.CreateThread(function()
     local day = GetClockDayOfWeek()
 	local min = GetClockMinutes()
     while day == 1 do 
-		Citizen.Wait(0)
         	if clock == 8 then
 				if min == 30 then
 					TriggerServerEvent('esx_taxes:player')
 				end
 			end
+			Citizen.Wait(60*1000)
 		end
 	end
 end)
